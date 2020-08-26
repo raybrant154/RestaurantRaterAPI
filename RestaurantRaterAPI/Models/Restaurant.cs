@@ -31,7 +31,7 @@ namespace RestaurantRaterAPI.Models
                 }
 
                 // Return Average of Total if the count is above 0
-                return (Ratings.Count > 0) ? totalAverageRating / Ratings.Count : 0;
+                return (Ratings.Count > 0) ? Math.Round(totalAverageRating / Ratings.Count, 2) : 0;
             }
         }
 
@@ -47,7 +47,7 @@ namespace RestaurantRaterAPI.Models
                     totalFoodRating += rating.FoodScore;
                 }
 
-                return (Ratings.Count > 0) ? totalFoodRating / Ratings.Count : 0;
+                return (Ratings.Count > 0) ? Math.Round(totalFoodRating / Ratings.Count, 2) : 0;
             }
         }
 
@@ -63,7 +63,7 @@ namespace RestaurantRaterAPI.Models
                     totalEnvironmentRating += rating.EnvironmentScore;
                 }
 
-                return (Ratings.Count > 0) ? totalEnvironmentRating / Ratings.Count : 0;
+                return (Ratings.Count > 0) ? Math.Round(totalEnvironmentRating / Ratings.Count, 2) : 0;
             }
         }
 
@@ -79,7 +79,7 @@ namespace RestaurantRaterAPI.Models
                     totalCleanlinessRating += rating.CleanlinessScore;
                 }
 
-                return (Ratings.Count > 0) ? totalCleanlinessRating / Ratings.Count : 0;
+                return (Ratings.Count > 0) ? Math.Round(totalCleanlinessRating / Ratings.Count, 2) : 0;
             }
         }
 
